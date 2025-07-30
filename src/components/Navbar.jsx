@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-[#09090b] backdrop-blur-md z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-white font-bold text-2xl cursor-pointer tracking-wider">
-          Peka Tech
+          T<span className="text-violet-400">✧</span>STUUDIO
         </div>
         <ul className="hidden md:flex space-x-8 items-center">
           {links.map(({ name, to }) => (

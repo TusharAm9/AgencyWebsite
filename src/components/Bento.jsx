@@ -11,7 +11,11 @@ const items = [
     color: "#222222",
     label: "Github",
   },
-  { icon: <FaReact className="w-10 h-10" />, color: "#00d8ff", label: "React" },
+  {
+    icon: <FaReact className="w-10 h-10" />,
+    color: "#00d8ff",
+    label: "React.js",
+  },
   {
     icon: <FaNodeJs className="w-10 h-10" />,
     color: "#68A063",
@@ -25,7 +29,7 @@ const items = [
   {
     icon: <SiExpress className="w-10 h-10" />,
     color: "#FFFF00",
-    label: "Express",
+    label: "Express.js",
   },
   {
     icon: <RiNextjsFill className="w-10 h-10" />,
@@ -38,32 +42,25 @@ export default function Bento() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-6 grid-rows-none md:grid-rows-4 gap-4 max-w-7xl mx-auto p-6 bg-[#09090b]">
       {/* Box 1: Insights */}
-      <MotionBox className="md:col-span-2 md:row-span-1 bg-neutral-300 transition-all duration-200 rounded-2xl p-6 flex flex-col justify-between hover:border-violet-500">
-        <span className="text-neutral-100 font-bold text-lg">Insights</span>
-        <div>
-          <span className="block font-semibold text-neutral-50 mt-4 mb-1">
-            Analytics
-          </span>
-          <span className="text-neutral-400 text-sm">Track user behavior</span>
-        </div>
+      <MotionBox className="md:col-span-2 md:row-span-1 transition-all duration-200 rounded-2xl p-6 flex flex-col justify-between">
+        <span className="text-neutral-100 font-bold text-lg flex justify-center">
+          Insights
+        </span>
       </MotionBox>
 
       {/* Box 2: Overview */}
-      <MotionBox className="md:col-span-2 md:row-span-1 bg-blue-950/90 rounded-2xl p-6 flex flex-col justify-between">
-        <span className="text-neutral-100 font-bold text-lg">Overview</span>
-        <div>
-          <span className="block font-semibold text-neutral-50 mt-4 mb-1">
-            Dashboard
-          </span>
-          <span className="text-neutral-400 text-sm">
-            Centralized data view
-          </span>
-        </div>
+      <MotionBox className="md:col-span-2 md:row-span-1 rounded-2xl p-6 flex flex-col justify-between ">
+        <span className="text-neutral-100 font-bold text-lg flex justify-center">
+          Overview
+        </span>
+        <div></div>
       </MotionBox>
 
       {/* Box 3: Teamwork (Large) */}
-      <MotionBox className="md:col-start-5 md:col-span-2 md:row-start-1 md:row-span-2 bg-violet-300 rounded-2xl p-6 flex flex-col justify-between">
-        <span className="text-neutral-100 font-bold text-lg">Tech stack</span>
+      <MotionBox className="md:col-start-5 md:col-span-2 md:row-start-1 md:row-span-2 rounded-2xl p-6 flex flex-col justify-between">
+        <span className="text-3xl font-bold text-neutral-50 flex justify-center mt-4 mb-1">
+          Tech stack
+        </span>
         <div className="mt-auto">
           <GlassIcons items={items} />
         </div>

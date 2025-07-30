@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Bento from "./components/Bento";
+import { TestimonialsVariant1 } from "./components/TestimonialsVariant1";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <Navbar />
       <Hero />
       <Projects />
-      <Bento />
+      <TestimonialsVariant1 />
+      {/* <Bento /> */}
       <Pricing />
       <Contact />
       <Footer />

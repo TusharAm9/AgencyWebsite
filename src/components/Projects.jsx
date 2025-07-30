@@ -1,13 +1,15 @@
 import CurvedLoop from "./CarvedLoop";
 import { motion } from "framer-motion";
+import MotionBox from "./utilis/MotionBox";
 
 export default function Projects() {
   const projects = [
     {
-      title: "Practical UI",
-      desc: "A modern, accessible UI design book for developers & designers.",
-      tag: "Book",
-      image: "/images/practical-ui.png", // replace with your image
+      title: "Artician Craft",
+      desc: "A modern, Handcraft E-commerce Website which sells Wooden & Bamboo products",
+      tag: "E-Commerce",
+      image:
+        "https://res.cloudinary.com/dftihiwel/image/upload/v1753856516/Untitled_design_z8kugz.png", // replace with your image
       link: "https://example.com",
       badgeColor: "bg-violet-700/10 text-violet-400",
     },
@@ -20,7 +22,7 @@ export default function Projects() {
       badgeColor: "bg-orange-700/10 text-orange-400",
     },
     {
-      title: "Figma Design System",
+      title: "Design System",
       desc: "A reusable design system in Figma for rapid prototyping.",
       tag: "Design System",
       image: "/images/figma-design.png",
@@ -31,32 +33,28 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="pt-16 bg-[#09090b] text-white">
-      <div className="flex items-center gap-2 md:gap-4 mb-20">
+    <section id="projects" className="pt-24 bg-[#09090b]">
+      <div className="flex items-center gap-2 md:gap-8 mb-20">
         <div className=" flex-grow border-t border-violet-200"></div>
-        <span className="whitespace-nowrap font-semibold text-2xl md:text-3xl drop-shadow-[0_0_40px_#8b5cf6]">
-          Some of my Latest Work
+        <span className="bg-gradient-to-br from-white to-neutral-500 bg-clip-text text-transparent font-semibold text-2xl md:text-6xl tracking-wide drop-shadow-[0_0_40px_#8b5cf6]">
+          Some Of Our Latest Work
         </span>
         <div className=" flex-grow border-t border-violet-200"></div>
       </div>
 
-      <div className="flex flex-wrap gap-10 justify-center ">
+      <div className="flex flex-wrap gap-10 justify-center mt-32 pt-10">
         {projects.map((p) => (
-          <motion.div
+          <MotionBox
             key={p.title}
-            whileHover={{
-              y: -5,
-              boxShadow: "0 8px 32px 0 rgba(80,40,255,0.20)",
-            }}
-            className="bg-[#18181c] rounded-xl w-80 shadow-lg flex flex-col transition-all duration-200 border border-neutral-800 hover:border-violet-500"
+            className="text-neutral-400 hover:text-white bg-gradient-to-r from-[#0d0d0d] to-[#131324] hover:bg-violet-900/50 rounded-xl w-80 h-96 shadow-lg flex flex-col transition-all duration-200 border border-neutral-800 hover:border-violet-500 "
           >
             {/* Image section */}
-            <div className="h-52 bg-neutral-800 rounded-t-xl flex items-center justify-center overflow-hidden">
+            <div className="h-72 bg-neutral-800 rounded-t-xl flex items-center justify-center overflow-hidden">
               {p.image ? (
                 <img
                   alt={p.title}
                   src={p.image}
-                  className="w-28 h-32 object-contain"
+                  className="w-full h-full bg-cover"
                 />
               ) : (
                 <div className="h-28 w-28 bg-neutral-700 rounded-xl" />
@@ -69,10 +67,12 @@ export default function Projects() {
               >
                 {p.tag}
               </span>
-              <h3 className="font-extrabold text-lg mb-1">{p.title}</h3>
-              <p className="text-neutral-400 text-sm flex-1">{p.desc}</p>
+              <h3 className="font-extrabold text-lg mb-1 md:text-2xl ">
+                {p.title}
+              </h3>
+              <p className="text-sm flex-1">{p.desc}</p>
             </div>
-          </motion.div>
+          </MotionBox>
         ))}
       </div>
       <CurvedLoop

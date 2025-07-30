@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="bg-[#09090b] text-white min-h-[100vh] flex justify-center items-center relative overflow-hidden "
+      className="bg-[#09090b] text-white min-h-[100vh] flex justify-center items-center relative overflow-hidden md:pt-12"
     >
       <div
         className="pointer-events-none absolute bottom-0 left-0 w-full h-[20vh] z-20"
@@ -45,15 +45,15 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-[50px_12px_80px_#8b5cf6]"
+          className="text-4xl md:text-9xl md:tracking-wide font-bold mb-4 drop-shadow-[50px_12px_80px_#8b5cf6]"
         >
-          Peka Tech
+          T<span className="text-violet-400">✧</span>STUUDIO
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-xl md:text-2xl max-w-2xl bg-gradient-to-r from-neutral-50 to-zinc-600 bg-clip-text text-transparent drop-shadow-[0_0_52px_#8b5cf6]"
+          className="text-xl md:text-2xl max-w-2xl tracking-tight bg-gradient-to-r from-neutral-50 to-zinc-600 bg-clip-text text-transparent drop-shadow-[0_0_52px_#8b5cf6]"
         >
           We build scalable e-commerce & business logic websites for clients
           which are scalable and SEO friendly.
