@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section id="contact" className="bg-gray-950 py-12">
-      <h2 className="text-3xl font-bold text-white text-center mb-6">
+      <h2 className="text-6xl md:text-8xl font-bold text-center bg-gradient-to-br from-white to-neutral-800 bg-clip-text text-transparent pb-28">
         Contact
       </h2>
       <form className="max-w-lg mx-auto flex flex-col gap-5">

@@ -4,8 +4,8 @@ import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Bento from "./components/Bento";
-import { TestimonialsVariant1 } from "./components/TestimonialsVariant1";
+import ProcessTimeline from "./components/ProcessTimeline";
+import TestimonialScroller from "./components/TestimonialScroller";
 
 function App() {
   return (
@@ -13,7 +13,9 @@ function App() {
       <Navbar />
       <Hero />
       <Projects />
-      <TestimonialsVariant1 />
+      <ProcessTimeline />
+      <TestimonialScroller />
+      {/* <TestimonialsVariant1 /> */}
       {/* <Bento /> */}
       <Pricing />
       <Contact />
