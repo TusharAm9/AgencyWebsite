@@ -6,7 +6,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Artician Craft",
-      desc: "A modern, Handcraft E-commerce Website which sells Wooden & Bamboo products",
+      desc: "A modern, Handcraft E-commerce Website which sells Wooden & Bamboo products.",
       tag: "E-Commerce",
       image:
         "https://res.cloudinary.com/dftihiwel/image/upload/v1753856516/Untitled_design_z8kugz.png",
@@ -14,12 +14,11 @@ export default function Projects() {
       badgeColor: "bg-violet-700/10 text-violet-400",
     },
     {
-      title: "Figma Design System",
-      desc: "A reusable design system in Figma for rapid prototyping.",
-      tag: "Design System",
+      title: "HotailBNB",
+      desc: "A Hotail Booking Site where user can come, browse and book their rooms from anywhere.",
+      tag: "Hotail Booking",
       image:
-        "https://res.cloudinary.com/dftihiwel/image/upload/v1753856516/Untitled_design_z8kugz.png",
-      link: "#",
+        "https://res.cloudinary.com/dftihiwel/image/upload/v1753941229/Untitled_design_1_zrrtyx.png",
       badgeColor: "bg-orange-700/10 text-orange-400",
     },
     {
@@ -36,15 +35,11 @@ export default function Projects() {
 
   return (
     <section id="projects" className="md:pt-24 bg-[#09090b]">
-      <div className="flex items-center gap-2 md:gap-8 mb-20">
-        <div className=" flex-grow border-t border-violet-200"></div>
-        <span className="bg-gradient-to-br from-white to-gray-800 bg-clip-text text-transparent font-semibold text-3xl md:text-7xl tracking-wide drop-shadow-[0_0_40px_#8b5cf6]">
-          Some Of Our Latest Work
-        </span>
-        <div className=" flex-grow border-t border-violet-200"></div>
-      </div>
+      <h2 className="text-3xl md:text-7xl text-center font-extrabold bg-gradient-to-br from-white to-violet-300 bg-clip-text text-transparent mb-16">
+        Recent Works
+      </h2>
 
-      <div className="flex flex-wrap gap-10 justify-center md:mt-32 md:pt-10">
+      <div className="flex flex-wrap gap-10 justify-center md:mt-12 md:pt-10">
         {projects.map((p) => (
           <MotionBox
             key={p.title}

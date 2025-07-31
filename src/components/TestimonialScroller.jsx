@@ -29,7 +29,7 @@ const testimonials = [
     company: "Creative Studio",
     content:
       "A true professional with exceptional design sense. The collaboration was smooth and the results were phenomenal.",
-    rating: 5,
+    rating: 4,
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=emily",
   },
   {
@@ -39,7 +39,7 @@ const testimonials = [
     company: "InnovateLab",
     content:
       "Transformed our vision into reality with precision and creativity. Highly recommend for any complex project.",
-    rating: 5,
+    rating: 3,
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=david",
   },
   {
@@ -169,9 +169,9 @@ function TestimonialScroller() {
 
   // -- JSX
   return (
-    <div className="bg-black min-h-screen py-20 px-4 relative overflow-hidden">
+    <div className="bg-[#09090b] min-h-screen py-20 px-4 relative overflow-hidden">
       {/* --- Background Effects --- */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-[#08090b]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" />
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />

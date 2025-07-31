@@ -42,7 +42,7 @@ export default function Navbar() {
             </li>
           ))}
           <a
-            className="bg-violet-500 items-center text-neutral-300 px-6 py-2 rounded-lg font-semibold hover:bg-neutral-300 transition shadow-lg text-shadow-lg "
+            className="bg-violet-500 items-center text-neutral-300 px-6 py-2 rounded-lg font-semibold hover:bg-violet-800 transition shadow-lg text-shadow-lg "
             href="#contact"
           >
             Contact Us
