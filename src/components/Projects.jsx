@@ -1,5 +1,4 @@
 import CurvedLoop from "./CarvedLoop";
-import { motion } from "framer-motion";
 import MotionBox from "./utilis/MotionBox";
 
 export default function Projects() {

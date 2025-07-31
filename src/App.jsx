@@ -15,8 +15,6 @@ function App() {
       <Projects />
       <ProcessTimeline />
       <TestimonialScroller />
-      {/* <TestimonialsVariant1 /> */}
-      {/* <Bento /> */}
       <Pricing />
       <Contact />
       <Footer />
