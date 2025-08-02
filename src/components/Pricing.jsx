@@ -1,3 +1,4 @@
+import { useState } from "react";
 import MotionBox from "./utilis/MotionBox";
 import TiltListItem from "./utilis/TiltListItem";
 
@@ -45,6 +46,84 @@ const plans = [
 ];
 
 export default function Pricing() {
+  const [showForm, setShowForm] = useState(false);
+  function PlanContactForm({ onClose }) {
+    const [form, setForm] = useState({
+      name: "",
+      email: "",
+      note: "",
+      datetime: "",
+    });
+
+    const handleChange = (e) => {
+      setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log(form);
+      onClose();
+    };
+
+    return (
+      <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+        <div className="bg-white rounded-xl p-8 w-96 shadow-lg relative">
+          <button onClick={onClose} className="absolute top-3 right-4 text-xl">
+            ✕
+          </button>
+          <h3 className="font-bold text-lg mb-4">
+            Let's discuss the work 1st, then pay.
+          </h3>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <input
+              name="name"
+              type="text"
+              placeholder="Your Name"
+              value={form.name}
+              onChange={handleChange}
+              required
+              className="p-2 rounded border"
+            />
+            <input
+              name="email"
+              type="email"
+              placeholder="Your Email"
+              value={form.email}
+              onChange={handleChange}
+              required
+              className="p-2 rounded border"
+            />
+            <textarea
+              name="note"
+              placeholder="What are you thinking to build?"
+              value={form.note}
+              onChange={handleChange}
+              required
+              className="p-2 rounded border resize-none"
+            />
+            <label>
+              When will you be available?
+              <input
+                name="datetime"
+                type="datetime-local"
+                value={form.datetime}
+                onChange={handleChange}
+                required
+                className="p-2 rounded border w-full"
+              />
+            </label>
+            <button
+              type="submit"
+              className="bg-cyan-600 hover:bg-cyan-800 text-white font-bold py-2 rounded"
+            >
+              Send Request
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
   const cardBG =
     "bg-gradient-to-br from-gray-900/50 via-[#141425]/80 to-black/70 backdrop-blur-md border border-gray-800/60";
   return (
@@ -54,9 +133,8 @@ export default function Pricing() {
       </h2>
       <div className="flex flex-wrap justify-center gap-7">
         {plans.map((plan) => (
-          <TiltListItem>
+          <TiltListItem key={plan.name}>
             <MotionBox
-              key={plan.name}
               className={`
               ${cardBG}
               rounded-2xl w-[92vw] max-w-xs p-8
@@ -87,13 +165,17 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <button className="mt-auto px-6 py-3 bg-white/5 text-white text-lg md:text-2xl font-bold rounded-lg hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-cyan-300">
+              <button
+                onClick={() => setShowForm(true)}
+                className="mt-auto px-6 py-3 bg-white/5 text-white text-lg md:text-2xl font-bold rounded-lg hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-cyan-300"
+              >
                 Add Plan
               </button>
             </MotionBox>
           </TiltListItem>
         ))}
       </div>
+      {showForm && <PlanContactForm onClose={() => setShowForm(false)} />}
     </section>
   );
 }

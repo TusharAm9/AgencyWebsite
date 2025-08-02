@@ -35,7 +35,7 @@ const processSteps = [
 
 export default function ProcessTimeline() {
   return (
-    <section className="py-20 bg-[#09090b]">
+    <section id="services" className="py-20 bg-[#09090b]">
       <h2 className="text-3xl md:text-7xl text-center font-extrabold bg-gradient-to-br from-white to-violet-300 bg-clip-text text-transparent mb-16">
         How We Work
       </h2>
